@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-
-import Carousel from "../../components/carousel/Carousel";
-
-import img2 from "../../images/album/album2.jpg";
-import img3 from "../../images/album/album3.jpg";
-import imgt1 from "../../images/tracks/track1.jfif";
-import imgt2 from "../../images/tracks/track2.png";
-import imgt3 from "../../images/tracks/track3.jpg";
+import './style.css';
+import Carousel from "../../../components/carousel/Carousel";
+import img2 from "../../../images/album/album2.jpg";
+import img3 from "../../../images/album/album3.jpg";
+import imgt1 from "../../../images/tracks/track1.jfif";
+import imgt2 from "../../../images/tracks/track2.png";
+import imgt3 from "../../../images/tracks/track3.jpg";
 
 const data = [
   {
