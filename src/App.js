@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { Outlet } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/navigationbar/Navbar";
+import SlideBar from "./components/sliebar/SlideBar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <SlideBar></SlideBar>
+      <div className="right">
+        <Navbar></Navbar>
+        <div className="content-r">
+          <Outlet />
+        </div>
+      </div>
     </div>
   );
 }

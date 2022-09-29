@@ -1,13 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Admin from "./pages/admin/Home";
+import NotFound from "./pages/NotFound";
+import New from "./pages/client/New";
+import Trending from "./pages/client/Trending";
+import Account from "./pages/client/Account";
+import Collection from "./pages/client/Collection";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="/" element={< New/>} />
+          <Route path="trend" element={<Trending/>} />
+          <Route path="account" element={<Account/>} />
+          <Route path="collection" element={<Collection/>} />
+          <Route path="*" element={< NotFound/>} />
+        </Route>
+        <Route path="/admin" element={<Admin/>}>
+
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
