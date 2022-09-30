@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Admin from "./pages/admin/Home";
+import Admin from "./pages/admin/home/Home";
 import NotFound from "./pages/NotFound";
 import New from "./pages/client/new/New";
 import Trending from "./pages/client/trending/Trending";
