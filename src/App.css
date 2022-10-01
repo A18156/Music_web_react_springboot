@@ -6,7 +6,6 @@
     --text-second-color: #33d2dd;
     --toggle-color: #fff;
     --primary-color-light: #3a3b3c;
-
 }
 
 * {
@@ -16,23 +15,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background: var(--bg-r-color);
-}
-
 .container {
-    float: left;
+    display: flex;
 }
 
 .right {
-    position: absolute;
-    top: 0;
-    left: 240px;
+    height: 100vh;
     width: calc(100vw - 240px);
     color: var(--text-color);
+    background: var(--bg-r-color);
+    margin-left: 0;
 }
 
 .content-r {
-    margin-top: 90px;
-    min-width: 100%;
+    margin-top: 100px;
 }

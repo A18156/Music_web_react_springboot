@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './style.css';
+import "./style.css";
 import Carousel from "../../../components/carousel/Carousel";
 import img2 from "../../../images/album/album2.jpg";
 import img3 from "../../../images/album/album3.jpg";
@@ -47,10 +47,26 @@ function New() {
     beforeChange: (current, next) => setSlideIndex(next),
   };
   const category = {
-    slidesToShow: 6,
+    slidesToShow: 7,
     slideToScroll: 1,
     speed: 500,
     focusOnSelect: true,
+    centerPadding: "0px",
+    centerMode: true,
+    afterChange: (current) => setSelectType(current),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+        },
+      },{
+        breakpoint:768,
+        settings: {
+          slidesToShow: 3,
+        },
+      }
+    ],
   };
   return (
     <div>
@@ -71,11 +87,9 @@ function New() {
           {type.map((val, idx) => (
             <div key={idx}>
               <div
-                className={
-                  idx === selectType
-                    ? "category-text category-active"
-                    : "category-text"
-                }
+                className={`category-text  ${
+                  idx === selectType ? "category-active " : ""
+                }`}
               >
                 {val.type}
               </div>

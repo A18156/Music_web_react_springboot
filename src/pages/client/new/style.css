@@ -17,6 +17,9 @@
 
 .category {
     margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
 .category-text {

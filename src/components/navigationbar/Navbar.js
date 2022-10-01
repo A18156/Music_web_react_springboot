@@ -1,10 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./style.css";
 import "boxicons";
 import "../navigationbar/style.css";
 import UserIcon from "../../images/user.png";
-import Logo from "../../images/logo.png";
 
 function Navbar() {
   return (
