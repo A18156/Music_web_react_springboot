@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import "boxicons";
 import { Link } from "react-router-dom";
 import Logo from "../../images/logo.png";
 
 function SlideBar() {
+  const [open, setOpen] = useState(false);
+  const toggle = () => setOpen(!open);
   return (
-    <div className="sidebar">
+    <div className={open === true ? "sidebar close" : "sidebar"}>
       <div className="left-side">
         <div className="brand">
-          <Link className="logo" to="">
-            <img src={Logo} alt="MusicHub" />
-            <h1>MusicHub</h1>
-          </Link>
+          <div className="brand-box">
+            <Link className="brand-img" to="">
+              <img src={Logo} alt="MusicHub" />
+              <h1 className="hide-text">MusicHub</h1>
+            </Link>
+          </div>
         </div>
         <div className="menu-bar">
           <ul className="menu-links">
@@ -21,7 +25,7 @@ function SlideBar() {
                 <i className="icon">
                   <box-icon name="music"></box-icon>
                 </i>{" "}
-                New
+                <span className="hide-text">New</span>
               </Link>
             </li>
             <li>
@@ -29,7 +33,7 @@ function SlideBar() {
                 <i className="icon">
                   <box-icon type="logo" name="deezer"></box-icon>
                 </i>{" "}
-                trend
+                <span className="hide-text">trend</span>
               </Link>
             </li>
             <li>
@@ -37,7 +41,7 @@ function SlideBar() {
                 <i className="icon">
                   <box-icon name="user-pin"></box-icon>
                 </i>{" "}
-                Account
+                <span className="hide-text">Account</span>
               </Link>
             </li>
             <li>
@@ -45,7 +49,7 @@ function SlideBar() {
                 <i className="icon">
                   <box-icon name="heart"></box-icon>
                 </i>{" "}
-                collection
+                <span className="hide-text">collection</span>
               </Link>
             </li>
           </ul>
@@ -53,10 +57,9 @@ function SlideBar() {
       </div>
       <div className="bottom-sidebar">
         <Link to="new">
-          <i className="icon">
-            <box-icon name="log-out"></box-icon>
-          </i>{" "}
-          logout
+          <i className="toggle icon" onClick={toggle}>
+            <box-icon type="solid" name="chevron-right"></box-icon>
+          </i>
         </Link>
       </div>
     </div>

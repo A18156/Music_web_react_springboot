@@ -10,21 +10,53 @@
     font-size: 1.2rem;
 }
 
-.sidebar .left-side {
-    height: 90%;
+.sidebar.close {
+    width: 88px;
 }
 
-.sidebar .left-side .brand .logo {
+.sidebar.close~.right {
+    left: 88px;
+}
+
+.sidebar.close~.conten-nav-r {
+    left: 88px;
+}
+
+.sidebar.close .hide-text {
+    opacity: 0;
+    /* visibility: hidden; */
+}
+
+.sidebar.close .toggle {
+    transform: rotate(0deg);
+}
+
+.left-side {
+    height: 95%;
+}
+
+.brand-box {
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.brand-img {
     display: flex;
     align-items: center;
     text-decoration: none;
 }
 
-.sidebar .left-side .logo img {
+.brand-img img {
     width: 60px;
 }
 
-.sidebar .left-side .brand .logo h1 {
+.brand .brand-img h1 {
     white-space: nowrap;
     opacity: 1;
     color: var(--text-color);
@@ -32,11 +64,11 @@
     padding-left: 10px;
 }
 
-.sidebar .menu-bar {
+.menu-bar {
     margin-top: 3rem;
 }
 
-.sidebar .menu-bar .menu-links li {
+.menu-links li {
     height: 50px;
     list-style: none;
     display: flex;
@@ -44,7 +76,7 @@
     margin-top: 10px;
 }
 
-.sidebar .menu-bar .menu-links li a .icon {
+.menu-links li a .icon {
     min-width: 60px;
     border-radius: 6px;
     height: 100%;
@@ -54,7 +86,7 @@
     fill: var(--text-color)
 }
 
-.sidebar .menu-bar .menu-links li a {
+.menu-links li a {
     color: var(--text-color);
     list-style: none;
     height: 100%;
@@ -69,24 +101,48 @@
     opacity: 1;
 }
 
-.sidebar .bottom-sidebar {
-    height: 10%;
+.bottom-sidebar {
+    height: 5%;
+    display: flex;
+    position: relative;
 }
 
-.sidebar .bottom-sidebar a {
+.bottom-sidebar a {
     text-decoration: none;
     color: var(--text-color);
     display: flex;
     align-items: center;
 }
 
-.sidebar .bottom-sidebar a i {
-    min-width: 60px;
-    min-height: 50px;
+.bottom-sidebar a i {
+    width: 50px;
+    height: 50px;
     border-radius: 6px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    fill: var(--text-color)
+    fill: var(--text-color);
+    border-radius: 50%;
+}
+
+.toggle {
+    position: absolute;
+    right: 0;
+    transform: rotate(180deg);
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: all 1s;
+    opacity: 0.6;
+}
+
+.toggle:hover {
+    fill: #f79f3d;
+    opacity: 1;
 }

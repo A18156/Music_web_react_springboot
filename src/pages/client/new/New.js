@@ -86,7 +86,7 @@ function New() {
       <div className="songs">
         <div className="box-container">
           {datat.map((val, idx) => (
-            <div className="box">
+            <div key={idx} className="box">
               <img src={val.img} alt={"img" + idx} />
               <div className="column">
                 <h3>track 1</h3>
@@ -95,7 +95,7 @@ function New() {
             </div>
           ))}
           {datat.map((val, idx) => (
-            <div className="box">
+            <div key={idx} className="box">
               <img src={val.img} alt={"img" + idx} />
               <div className="column">
                 <h3>track 1</h3>
