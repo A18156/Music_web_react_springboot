@@ -15,18 +15,23 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.container {
-    display: flex;
+body {
+    background: var(--bg-r-color);
 }
 
 .right {
-    height: 100vh;
-    width: calc(100vw - 240px);
     color: var(--text-color);
-    background: var(--bg-r-color);
-    margin-left: 0;
+    /* background: var(--bg-r-color); */
+    margin-left: 240px;
+    padding: 5px;
 }
 
 .content-r {
-    margin-top: 100px;
+    margin-top: 80px;
+}
+
+@media (max-width: 1024px) {
+    .right {
+        margin-left: 88px;
+    }
 }

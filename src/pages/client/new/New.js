@@ -35,7 +35,7 @@ const type = [
 function New() {
   const [slideIndex, setSlideIndex] = useState(0);
   const [selectType, setSelectType] = useState(0);
-  const set = {
+  const newSlider = {
     centerMode: true,
     infinite: true,
     centerPadding: "0px",
@@ -69,13 +69,14 @@ function New() {
     ],
   };
   return (
-    <div>
-      <div className="slider">
-        <Carousel set={set}>
+    <>
+      <div className="newslider">
+        <Carousel set={newSlider}>
           {data.map((val, idx) => (
+            // eslint-disable-next-line
             <div
               key={idx}
-              className={idx === slideIndex ? "slide slide-active" : "slide"}
+              className={`newSlide ${idx === slideIndex ? "newSlide-active" : ""}`}
             >
               <img className="img" src={val.img} alt={"img" + idx} />
             </div>
@@ -119,7 +120,7 @@ function New() {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 export default New;

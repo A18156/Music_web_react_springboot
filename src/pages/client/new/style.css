@@ -1,17 +1,16 @@
-.slider {
+.newslider .slick-slider .slick-arrow {
+    display: none !important;
+}
+
+.newSlide img {
     width: 100%;
 }
 
-.slide,
-.slide img {
-    width: 100%;
-}
-
-.slide {
+.newSlide {
     transform: scale(.7);
 }
 
-.slide-active {
+.newSlide-active {
     transform: scale(1);
 }
 
@@ -20,6 +19,10 @@
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+}
+
+.category .slick-slider .slick-arrow {
+    display: none !important;
 }
 
 .category-text {
