@@ -5,7 +5,10 @@
     --text-color: rgb(226, 220, 220);
     --text-second-color: #33d2dd;
     --toggle-color: #fff;
+    --primary-color: #f88150;
     --primary-color-light: #3a3b3c;
+    --primary-color-light-second: rgb(184, 184, 184, .1);
+    --primary-color-light-3rd: rgb(184, 184, 184, .3);
 }
 
 * {
@@ -28,6 +31,11 @@ body {
 
 .content-r {
     margin-top: 80px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 1024px) {

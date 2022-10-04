@@ -47,14 +47,14 @@
     gap: 1.5rem;
 }
 
-.box {
+.new-box {
     text-align: center;
     display: flex;
     padding: 20px;
     justify-content: center;
 }
 
-.box img {
+.new-box img {
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -63,6 +63,4 @@
 .column {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
-    text-align: left;
 }

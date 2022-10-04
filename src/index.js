@@ -10,6 +10,7 @@ import New from "./pages/client/new/New";
 import Trending from "./pages/client/trending/Trending";
 import Account from "./pages/client/account/Account";
 import Collection from "./pages/client/collection/Collection";
+import Album from "./pages/client/album/Album";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +22,7 @@ root.render(
           <Route path="trend" element={<Trending/>} />
           <Route path="account" element={<Account/>} />
           <Route path="collection" element={<Collection/>} />
+          <Route path="/album/:albumName" element={<Album/>}/>
           <Route path="*" element={< NotFound/>} />
         </Route>
         <Route path="/admin" element={<Admin/>}>
