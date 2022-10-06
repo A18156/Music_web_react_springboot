@@ -8,7 +8,7 @@ function SlideBar() {
   const [open, setOpen] = useState(false);
   const toggle = () => setOpen(!open);
   return (
-    <div className={`sidebar ${open === true ? "open" : ""}`}>
+    <div className={`sidebar ${open  ? "open" : ""}`}>
       <div className="brand">
         <div className="brand-box">
           <Link className="brand-img" to="">

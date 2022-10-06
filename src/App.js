@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/navigationbar/Navbar";
+import PlayBar from "./components/play-bar/PlayBar";
 import SlideBar from "./components/sliebar/SlideBar";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Outlet />
         </div>
       </div>
+      <PlayBar></PlayBar>
     </div>
   );
 }

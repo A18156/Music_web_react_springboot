@@ -90,6 +90,7 @@
 @media (max-width: 1024px) {
     .sidebar {
         width: 88px;
+        height: calc(100% - 90px);
     }
     .bottom-sidebar {
         display: flex;
