@@ -1,8 +1,9 @@
 import React from "react";
 import "./style.css";
-import "boxicons";
 import "../navigationbar/style.css";
 import UserIcon from "../../images/user.png";
+import {BsSearch} from "react-icons/bs"; 
+import {BiUpload} from "react-icons/bi"; 
 
 function Navbar() {
   return (
@@ -10,7 +11,7 @@ function Navbar() {
       <div className="search-box">
         <div className="search">
           <i className="bi">
-            <box-icon name="search-alt"></box-icon>
+            <BsSearch/>
           </i>
           <input type="text" placeholder="Search Music..." />
         </div>
@@ -19,7 +20,7 @@ function Navbar() {
         <li className="nav-vip">vip</li>
         <li className="nav-upload">
           <i>
-            <box-icon name="upload"></box-icon>
+            <BiUpload/>
           </i>
         </li>
         <li>

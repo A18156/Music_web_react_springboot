@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./style.css";
-import "boxicons";
 import { Link } from "react-router-dom";
 import Logo from "../../images/logo.png";
+import {FaMusic,FaDeezer,FaRegHeart,FaChevronRight} from "react-icons/fa"; 
+import {AiOutlineProfile} from "react-icons/ai"; 
 
 function SlideBar() {
   const [open, setOpen] = useState(false);
@@ -23,7 +24,7 @@ function SlideBar() {
             <li>
               <Link to="">
                 <i className="icon">
-                  <box-icon size="md" name="music"></box-icon>
+                  <FaMusic/>
                 </i>
                 <span className="hide-text">New</span>
               </Link>
@@ -31,7 +32,7 @@ function SlideBar() {
             <li>
               <Link to="trend">
                 <i className="icon">
-                  <box-icon size="md" type="logo" name="deezer"></box-icon>
+                  <FaDeezer/>
                 </i>
                 <span className="hide-text">trend</span>
               </Link>
@@ -39,7 +40,7 @@ function SlideBar() {
             <li>
               <Link to="account">
                 <i className="icon">
-                  <box-icon size="md" name="user-pin"></box-icon>
+                  <AiOutlineProfile/>
                 </i>
                 <span className="hide-text">Account</span>
               </Link>
@@ -47,7 +48,7 @@ function SlideBar() {
             <li>
               <Link to="collection">
                 <i className="icon">
-                  <box-icon size="md" name="heart"></box-icon>
+                  <FaRegHeart/>
                 </i>
                 <span className="hide-text">collection</span>
               </Link>
@@ -56,7 +57,7 @@ function SlideBar() {
         </div>
         <div className="bottom-sidebar">
           <i className="toggle" onClick={toggle}>
-            <box-icon size="md" type="solid" name="chevron-right"></box-icon>
+            <FaChevronRight/>
           </i>
           <div className="menu-board"></div>
         </div>

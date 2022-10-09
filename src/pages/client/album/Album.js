@@ -2,9 +2,7 @@ import React from "react";
 import "./style.css";
 import { useParams } from "react-router-dom";
 import imgt2 from "../../../images/tracks/track2.png";
-import imgt3 from "../../../images/tracks/track3.jpg";
 import img2 from "../../../images/album/album2.jpg";
-const datat = [{ img: imgt2 }, { img: imgt3 }];
 
 function Album() {
   let { albumName } = useParams();
