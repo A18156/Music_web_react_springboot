@@ -5,6 +5,7 @@ import UserIcon from "../../images/user.png";
 import { BsSearch } from "react-icons/bs";
 import { BiUpload } from "react-icons/bi";
 import headerImg from "../../images/Wallpaper-Engine-Steam-App.jpg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [navbarActive, setNavbarActive] = useState(false);
@@ -26,7 +27,9 @@ function Navbar() {
           </div>
         </div>
         <ul>
-          <li className="nav-vip">vip</li>
+          <Link to="premium">
+            <li className="nav-vip">vip</li>
+          </Link>
           <li className="nav-upload">
             <i>
               <BiUpload />

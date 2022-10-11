@@ -12,6 +12,7 @@ import Account from "./pages/client/account/Account";
 import Collection from "./pages/client/collection/Collection";
 import Album from "./pages/client/album/Album";
 import Category from "./pages/client/category/Category";
+import Premium from "./pages/client/premium/Premium";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -24,6 +25,7 @@ root.render(
           <Route path="trend" element={<Trending/>} />
           <Route path="account" element={<Account/>} />
           <Route path="collection" element={<Collection/>} />
+          <Route path="premium" element={<Premium/>} />
           <Route path="/album/:albumName" element={<Album/>}/>
           <Route path="*" element={< NotFound/>} />
         </Route>
