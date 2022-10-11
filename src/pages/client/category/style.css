@@ -1,0 +1,28 @@
+.category-container .slick-slider .slick-arrow {
+    display: none !important;
+}
+
+.category-container {
+    margin-top: 2rem;
+    padding: 20px;
+}
+
+.category-content {
+    background-color: var(--primary-color-light-second);
+    border-radius: 15px;
+    padding: 10px 5px;
+}
+
+.category-title {
+    padding-left: 10px;
+    margin-bottom: .6rem;
+    text-transform: capitalize;
+}
+
+.category-box {
+    padding: 0 10px;
+}
+
+.category-box-img img {
+    max-width: 100%;
+}

@@ -1,0 +1,44 @@
+.account-container {
+    margin-top: 2rem;
+    padding: 20px;
+}
+
+.account-content {
+    background-color: var(--primary-color-light-second);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.avatar img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+.user-info {
+    width: 70%;
+}
+
+.user-info {
+    list-style: none;
+    padding: 10px 10px 10px 40px;
+    font-size: 1.2rem;
+}
+
+.user-info li {
+    margin: 20px 0;
+    border-bottom: 1px solid;
+}
+
+@media (max-width: 768px) {
+    .account-content {
+        flex-direction: column;
+    }
+}

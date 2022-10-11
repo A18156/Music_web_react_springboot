@@ -7,10 +7,9 @@
     display: block;
 }
 
-
-/* .play-bar.active {
+.play-bar.active {
     display: none;
-} */
+}
 
 .bottom-bar {
     display: flex;
@@ -41,6 +40,17 @@
 
 .middle-play-bar {
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
 }
 
 .action-button ul {
@@ -74,13 +84,29 @@
     color: var(--primary-color);
 }
 
+.elapsed-time,
+.max-duration {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar {
+    width: 100%;
+}
+
 .right-play-bar {
     width: 20%;
+    padding: 10px;
 }
 
 .icon-vol {
+    display: flex;
+    align-items: center;
     font-size: 30px;
     color: var(--text-color);
+    margin-right: 10px;
 }
 
 .icon-close {
@@ -94,23 +120,10 @@
     cursor: pointer;
 }
 
-
-/* .progressBar {
-    appearance: none;
-    background-color: var(--text-color);
-    width: 100%;
-    height: 1px;
-    cursor: pointer;
-    opacity: 1;
-    margin: auto;
+.maxDuration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.progressBar::-webkit-slider-thumb {
-    appearance: none;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background: var(--primary-color);
-} */
 
 @media (min-width:1024px) {}

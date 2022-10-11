@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import TimeSlider from "react-input-slider";
 import "./style.css";
 import img from "../../images/tracks/track2.png";
@@ -13,24 +13,50 @@ import {
   MdDoubleArrow,
 } from "react-icons/md";
 import { BiVolumeFull } from "react-icons/bi";
-import audioSrc from "./../../audio/1.mp3";
 const data = [
   { id: "1", name: "abc", url: audio1, artist: "abc" },
   { id: "2", name: "edf", url: audio2, artist: "edf" },
   { id: "3", name: "ghi", url: audio3, artist: "ghi" },
 ];
-function PlayBar(setOpen) {
+
+function PlayBar(setOpen, title, artist, src) {
   // open/close
-  const [playBarOpen, setPlayBarOpen] = useState(false);
+  const [playBarOpen, setPlayBarOpen] = useState(true);
   setOpen = () => setPlayBarOpen(!playBarOpen);
   // play/pause
-  let [isplaying, setIsPlaying] = useState(false);
-  const playToggle = () => setIsPlaying(!isplaying);
+  const [isplaying, setIsPlaying] = useState(false);
 
   const audioRef = useRef();
   const [audioIndex, setAudioIndex] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
+  const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [volume, setVolume] = useState(30);
+
+  useEffect(() => {
+    if (isplaying) {
+      setInterval(() => {
+        // const duration = Math.floor(audioRef?.current?.duration);
+        const elapsedTime = Math.floor(audioRef?.current?.currentTime);
+
+        // setDuration(duration);
+        setElapsed(elapsedTime);
+
+        // if (elapsedTime === duration) {
+        //   setIsPlaying(false);
+        //   audioRef.current.stop();
+        // }
+      }, 100);
+    }
+
+    if (audioRef) {
+      audioRef.current.volume = volume / 100;
+    }
+  }, [
+    audioRef?.current?.loadedmetadata,
+    audioRef?.current?.readyState,
+    isplaying,volume
+  ]);
 
   const handlePausePlayClick = () => {
     if (isplaying) {
@@ -42,8 +68,9 @@ function PlayBar(setOpen) {
   };
 
   const handleLoadedData = () => {
-    setDuration(audioRef.current.duration);
-    if (isplaying) audioRef.current.play();
+    setDuration(audioRef?.current?.duration);
+    setElapsed(audioRef?.current?.currentTime);
+    if (isplaying) audioRef?.current?.play();
   };
   const handleTimeSliderChange = ({ x }) => {
     audioRef.current.currentTime = x;
@@ -53,6 +80,20 @@ function PlayBar(setOpen) {
       setIsPlaying(true);
       audioRef.current.play();
     }
+  };
+
+  const calculateTime = (value) => {
+    const minutes =
+      Math.floor(value / 60) < 10
+        ? `0${Math.floor(value / 60)}`
+        : Math.floor(value / 60);
+
+    const seconds =
+      Math.floor(value % 60) < 10
+        ? `0${Math.floor(value % 60)}`
+        : Math.floor(value % 60);
+
+    return `${minutes}:${seconds}`;
   };
 
   return (
@@ -67,6 +108,7 @@ function PlayBar(setOpen) {
         </div>
         <div className="middle-play-bar">
           <div className="action-button">
+            <div className="elapsed-time">{calculateTime(elapsed)}</div>
             <ul>
               <li
                 className="icon-previous"
@@ -84,10 +126,11 @@ function PlayBar(setOpen) {
                 <MdSkipNext />
               </li>
             </ul>
+            <div className="max-duration">{calculateTime(duration)}</div>
           </div>
           <div className="progress-bar">
             {/* <audio src={audioSrc} /> */}
-            {/* <div className="song-duration">0:00</div>  */}
+
             <div>
               {/* <input type="range" step="0.01" className="progressBar" /> */}
               <TimeSlider
@@ -99,22 +142,21 @@ function PlayBar(setOpen) {
                   track: {
                     backgroundColor: "var(--text-color)",
                     height: "1px",
-                    width:"100%",
-                    cursor:"pointer",
+                    width: "100%",
+                    cursor: "pointer",
                   },
                   active: {
                     backgroundColor: "var(--primary-color)",
                     height: "1px",
-                    cursor:"pointer",
+                    cursor: "pointer",
                   },
                   thumb: {
                     // marginTop: "-3px",
                     width: "15px",
                     height: "15px",
-                    borderRadius:"100%",
                     backgroundColor: "var(--primary-color)",
                     borderRadius: "50%",
-                    cursor:"pointer",
+                    cursor: "pointer",
                   },
                 }}
               />
@@ -125,7 +167,7 @@ function PlayBar(setOpen) {
                 onTimeUpdate={() =>
                   setCurrentTime(audioRef.current.currentTime)
                 }
-                onEnded={() => setIsPlaying(false)}
+                onEnded={() => setAudioIndex((audioIndex + 1) % data.length)}
               />
             </div>
           </div>
@@ -136,7 +178,7 @@ function PlayBar(setOpen) {
           </div>
         </div>
         <div className="play-bar-close">
-          <div className="icon-close" onClick={setOpen}>
+          <div className={`icon-close ${setOpen ? "active" : ""}`} onClick={setOpen}>
             <MdDoubleArrow />
           </div>
         </div>

@@ -3,11 +3,11 @@
     --bg-r-color: #0b1320;
     --bg-l-color: #111727;
     --text-color: rgb(226, 220, 220);
-    --text-second-color: #33d2dd;
+    --text-second-color: #000;
     --toggle-color: #fff;
     --primary-color: #f88150;
     --primary-color-1st: #1B365D;
-    --primary-color-3rd: #cba029;
+    --primary-color-3rd: #f34120;
     --primary-color-light: #3a3b3c;
     --primary-color-light-second: rgb(184, 184, 184, .1);
     --primary-color-light-3rd: rgb(184, 184, 184, .3);
@@ -27,14 +27,13 @@ body {
 
 .right {
     color: var(--text-color);
-    /* background: var(--bg-r-color); */
     margin-left: 240px;
-    padding: 5px;
 }
 
-.content-r {
+
+/* .content-r {
     margin-top: 80px;
-}
+} */
 
 .column {
     display: flex;
