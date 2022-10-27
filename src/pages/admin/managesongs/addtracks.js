@@ -4,6 +4,8 @@ import Logo from "../../../images/logo.png"
 
 
 const addtracks = () => {
+    const [selectSongType, setSelectSongType] = useState('');
+    const [selectSongState, setSelectSongState] = useState('');
     var showdate = new Date();
     // var displaytodaysdate = showdate.getDate() + '/' + showdate.getMonth() + '/' + showdate.getFullYear();
     var today = showdate.toDateString();
@@ -52,8 +54,8 @@ const addtracks = () => {
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="songtype">Song Type</label>
-                                        <select className="form-select form-control" aria-label="Default select example" name="songtype" id="songtype">
-                                            <option selected>Choose Song Type</option>
+                                        <select className="form-select form-control" aria-label="Default select example" name="songtype" id="songtype" value={selectSongType} onChange={(e) => setSelectSongType(e.target.value)} >
+                                            <option value="0">Choose Song Type</option>
                                             <option value="1">EDM</option>
                                             <option value="2">Ballad</option>
                                             <option value="3">Pop</option>
@@ -61,8 +63,8 @@ const addtracks = () => {
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="songstate">Song State</label>
-                                        <select className="form-select form-control" aria-label="Default select example" name="songstate" id="songstate">
-                                            <option selected>Choose Song State</option>
+                                        <select className="form-select form-control" aria-label="Default select example" name="songstate" id="songstate" value={selectSongState} onChange={(e) => setSelectSongState(e.target.value)} >
+                                            <option value="0">Choose Song State</option>
                                             <option value="1">Premium</option>
                                             <option value="2">Normal</option>
                                         </select>
