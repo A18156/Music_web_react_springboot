@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from "../../../images/logo.png"
 import { Link } from 'react-router-dom'
 
+
 const Addaccount = () => {
+    const [selectPosition, setSelectPosition] = useState('');
+    const [selectRole, setSelectRole] = useState('');
     var showdate = new Date();
     // var displaytodaysdate = showdate.getDate() + '/' + showdate.getMonth() + '/' + showdate.getFullYear();
     var today = showdate.toDateString();
@@ -57,18 +60,18 @@ const Addaccount = () => {
                                         <input type="password" name="accpass" id="accpass" className="form-control" />
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="songtype">Role Name</label>
-                                        <select className="form-select form-control" aria-label="Default select example" name="songtype" id="songtype">
-                                            <option selected>Choose Role</option>
+                                        <label htmlFor="accrole">Role Name</label>
+                                        <select className="form-select form-control" aria-label="Default select example" name="accrole" id="accrole" value={selectRole} onChange={(e) => setSelectRole(e.target.value)} >
+                                            <option value="0">Choose Role</option>
                                             <option value="1">User</option>
                                             <option value="2">Manager</option>
                                             <option value="3">Admin</option>
                                         </select>
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="songstate">Position</label>
-                                        <select className="form-select form-control" aria-label="Default select example" name="songstate" id="songstate">
-                                            <option selected>Choose User Position</option>
+                                        <label htmlFor="accposition">Position</label>
+                                        <select className="form-select form-control" aria-label="Default select example" name="accposition" id="accposition" value={selectPosition} onChange={(e) => setSelectPosition(e.target.value)}>
+                                            <option value="0">Choose User Position</option>
                                             <option value="1">Ordinary</option>
                                             <option value="2">Singer</option>
                                         </select>
@@ -93,22 +96,8 @@ const Addaccount = () => {
                     </div>{/* /.container-fluid */}
 
                 </div>
-
-                {/* /.content-header */}
-                {/* Main content */}
-                {/* <section className="content">
-                    <div className="container-fluid"> */}
-
-
-                {/* <br /> */}
-
-
-                {/* /.row (main row) */}
-                {/* </div>/.container-fluid */}
-                {/* </section> */}
-                {/* /.content */}
             </div >
-        </div>
+        </div >
     )
 }
 
