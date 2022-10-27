@@ -4,6 +4,7 @@ import Navbar from "./components/navigationbar/Navbar";
 import PlayBar from "./components/play-bar/PlayBar";
 import SlideBar from "./components/sliebar/SlideBar";
 
+
 function App() {
   return (
     <div className="container">

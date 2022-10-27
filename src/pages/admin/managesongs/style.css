@@ -1,0 +1,88 @@
+.tbl-full {
+    width: 100%;
+    color: #000;
+}
+
+.tbl-full tr th {
+
+    padding: 1%;
+    text-align: left;
+}
+
+.tbl-full tr td {
+    padding: 1%;
+}
+
+.tbl-full th,
+.tbl-full td,
+.title-color {
+    color: var(--text-second-color);
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.btn-primary-admin {
+    padding: 5.5px;
+    width: 100px;
+    background-color: var(--yellow);
+    text-align: center;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary-admin:hover {
+    background-color: var(--orange);
+}
+
+.btn-update-admin {
+    padding: 1%;
+    background-color: var(--teal);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-update-admin:hover {
+    background-color: var(--cyan);
+}
+
+.btn-delete-admin {
+    padding: 1%;
+    background-color: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-delete-admin:hover {
+    background-color: var(--danger);
+}
+
+.edit-background {
+    background-color: var(--white);
+    min-height: 100vh;
+    width: 100%;
+}
+
+.edit-tbl {}
+
+.edit-tbl td {
+    padding: 1px;
+    color: var(--text-second-color);
+}
+
+.edit-button-admin {
+    color: var(--text-second-color);
+}
+
+.edit-top-link {
+    color: var(--primary-color-light-3rd);
+}
+
+.edit-top-link :hover {
+    color: blue;
+}

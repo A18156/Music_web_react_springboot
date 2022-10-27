@@ -1,4 +1,4 @@
-.sidebar {
+.navigation-left {
     width: 240px;
     height: 100%;
     background: var(--bg-l-color);
@@ -75,7 +75,7 @@
 }
 
 .menu-links li:hover {
-    background-color: var( --primary-color-light-second);
+    background-color: var(--primary-color-light-second);
     border-radius: 10px;
 }
 
@@ -101,13 +101,15 @@
 }
 
 @media (max-width: 1024px) {
-    .sidebar {
+    .navigation-left {
         width: 88px;
         /* height: calc(100% - 90px); */
     }
+
     .bottom-sidebar {
         display: flex;
     }
+
     .toggle {
         transform: rotate(0deg);
         width: 50px;
@@ -123,10 +125,12 @@
         background: var(--primary-color-light);
         transition: .3s linear;
     }
+
     .toggle:hover {
         background: #f79f3d;
         opacity: 1;
     }
+
     .menu-board {
         height: 100%;
         width: 0;
@@ -137,6 +141,7 @@
         transition: .3s linear;
         z-index: -1;
     }
+
     /* .sidebar.open .menu-links li {
         justify-content: center;
     } */
@@ -145,20 +150,24 @@
         transition: .3s linear;
         visibility: hidden;
     }
+
     .menu-links li .icon {
         justify-content: center;
     }
+
     /*  */
-    .sidebar.open .hide-text {
+    .navigation-left.open .hide-text {
         opacity: 1;
         transition: .3s linear .3s;
         visibility: visible;
     }
-    .sidebar.open .toggle {
+
+    .navigation-left.open .toggle {
         transform: translateX(150px) rotate(180deg);
         transition: .3s linear;
     }
-    .sidebar.open .menu-board {
+
+    .navigation-left.open .menu-board {
         width: 240px;
         transition: .3s linear;
     }
