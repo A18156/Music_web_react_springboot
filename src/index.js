@@ -23,10 +23,12 @@ import AdminPremium from "./pages/admin/payment/PremiumList";
 import SongPurchase from "./pages/admin/payment/SongPurchase";
 import ManageAccount from "./pages/admin/manageaccounts/ManageUserAccounts";
 
-import AddTracks from "./pages/admin/managesongs/addtracks";
-import AddSongTypes from "./pages/admin/managesongs/addsongtypes";
+import AddTracks from "./pages/admin/managesongs/AddTrack";
+import AddSongTypes from "./pages/admin/managesongs/AddSongType";
 import AddAccount from "./pages/admin/manageaccounts/Addaccount";
 import AddPremium from "./pages/admin/payment/AddPremium";
+import AddAlbumTypes from "./pages/admin/managealbum/AddAlbumType";
+import AddAlbum from "./pages/admin/managealbum/AddAlbum";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -56,6 +58,8 @@ root.render(
         <Route path="addsongtypes" element={<AddSongTypes />} />
         <Route path="addaccount" element={< AddAccount />} />
         <Route path="addpremium" element={<AddPremium />} />
+        <Route path="addalbumtypes" element={<AddAlbumTypes />} />
+        <Route path="addalbum" element={<AddAlbum />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

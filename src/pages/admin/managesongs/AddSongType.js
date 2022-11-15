@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from "../../../images/logo.png"
 
-const addsongtypes = () => {
+const AddSongType = () => {
     return (
         <div>
 
@@ -51,4 +51,4 @@ const addsongtypes = () => {
     )
 }
 
-export default addsongtypes
+export default AddSongType
