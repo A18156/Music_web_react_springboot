@@ -6,8 +6,10 @@ import { BsSearch } from "react-icons/bs";
 import { BiUpload } from "react-icons/bi";
 import headerImg from "../../images/Wallpaper-Engine-Steam-App.jpg";
 import { Link } from "react-router-dom";
+import { useAppContext } from "../../context/AppContextProvider";
 
 function Navbar() {
+  const { isLogin, user, signOut } = useAppContext();
   const [navbarActive, setNavbarActive] = useState(false);
   const changeBG = () => {
     if (window.scrollY >= 200) {
@@ -27,18 +29,27 @@ function Navbar() {
           </div>
         </div>
         <ul>
-          <Link to="premium">
-            <li className="nav-vip">vip</li>
-          </Link>
+          <li className="nav-vip">
+            <Link to="premium">
+              <span>vip</span>{" "}
+            </Link>
+          </li>
           <li className="nav-upload">
             <i>
               <BiUpload />
             </i>
           </li>
           <li>
-            <div className="user">
-              <img src={UserIcon} alt="User" />
-            </div>
+            {isLogin ? (
+              <>
+                <div className="user">
+                  <img src={UserIcon} alt="User" />
+                </div>
+                <button onClick={signOut}>Logout</button>
+              </>
+            ) : (
+              <Link to="login">Login Now</Link>
+            )}
           </li>
         </ul>
       </nav>

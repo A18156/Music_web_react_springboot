@@ -7,11 +7,11 @@ import { AiOutlineProfile } from "react-icons/ai";
 import { BiCategory } from "react-icons/bi";
 
 const navLink = [
-  { icon:<FaMusic/>, name: "new",link:"" },
-  { icon:<BiCategory/>, name: "Category" ,link:"category"},
-  { icon:<FaDeezer/>, name: "trend",link:"trend" },
-  { icon:<AiOutlineProfile/>, name: "Account" ,link:"account"},
-  { icon:<FaRegHeart/>, name: "collection", link:"collection" },
+  { icon:<FaMusic/>, name: "new",link:"../" },
+  { icon:<BiCategory/>, name: "Category" ,link:"../category"},
+  { icon:<FaDeezer/>, name: "trend",link:"../trend" },
+  { icon:<AiOutlineProfile/>, name: "Account" ,link:"../account"},
+  { icon:<FaRegHeart/>, name: "collection", link:"../collection" },
 ];
 function SlideBar() {
   const [open, setOpen] = useState(false);
@@ -24,7 +24,7 @@ function SlideBar() {
     <div className={`sidebar ${open ? "open" : ""}`}>
       <div className="brand">
         <div className="brand-box">
-          <Link className="brand-img" to="" onClick={()=>setNavActive(0)}>
+          <Link to={"../"} className="brand-img" onClick={()=>setNavActive(0)}>
             <img src={Logo} alt="MusicHub" />
             <h1 className="hide-text">MusicHub</h1>
           </Link>

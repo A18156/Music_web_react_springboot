@@ -1,0 +1,45 @@
+
+.f_signup_container{
+    margin-top: 2rem;
+    margin-left: 250px;
+    margin-right: 10px;
+}
+.signup_title{
+    border-bottom: 4px solid;
+    /* width:  calc(100% - 240px); */
+}
+.signup_title h1 {
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+
+
+.f_signup_row {
+  
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    position: relative;
+    width: 100%;
+}
+.f_signup_row input{
+    max-width: 250px;
+    min-height: 32px;
+}
+.f_signup_text{
+    font-size: 2rem;
+}
+
+.f_signup_validation {
+    bottom: -32px;
+    position: absolute;
+    color: var(--text-warning-color);
+}
+.signup_gender{
+    display: flex;
+    align-items: center;
+}
+.signup_gender label{
+    font-size: 1.2rem;
+    margin-left: 5px;
+}

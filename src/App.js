@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import React from "react";
 import "./App.css";
 import Navbar from "./components/navigationbar/Navbar";
 import PlayBar from "./components/play-bar/PlayBar";
