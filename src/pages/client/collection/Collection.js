@@ -1,8 +1,11 @@
 import React from 'react'
+import Createform from '../../../components/create/createform'
 
 function Collection() {
   return (
-    <div>Collection</div>
+    <div>
+      <Createform/>
+    </div>
   )
 }
 

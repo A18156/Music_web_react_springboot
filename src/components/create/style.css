@@ -1,0 +1,86 @@
+.f-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-content {
+    width: 60%;
+    background: var(--primary-color-light-second);
+    margin-top: 2rem;
+    padding: 20px;
+    border-radius: 15px;
+    justify-content: center;
+}
+
+.f-content h2 {
+    color: var(--primary-color);
+}
+
+.t-row {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    justify-content: center;
+}
+
+.t-row label {
+    width: 90px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.t-row input {
+    width: calc(100% - 90px);
+    height: 30px;
+    padding: 10px;
+    color: var(--text-second-color);
+    border-radius: 5px;
+    border: none;
+}
+
+.f-button {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.f-button input {
+    width: 80px;
+    font-size: 1rem;
+    background: var(--primary-color);
+    border-radius: 15px;
+    border: none;
+}
+
+.f-button input:hover {
+    background: linear-gradient( 156deg, rgba(243, 65, 32, 1) 10%, rgba(248, 129, 80, 1) 42%, rgba(247, 192, 43, 1) 100%);
+}
+
+.error-mgs {
+    display: flex;
+    color: var(--text-warning-color);
+    margin-left: 90px;
+    position: absolute;
+}
+
+@media (max-width:768px) {
+    .f-content {
+        width: 80%;
+    }
+    .t-row {
+        flex-direction: column;
+    }
+    .t-row label {
+        width: 100%;
+        text-align: left;
+    }
+    .t-row input {
+        width: 100%;
+    }
+    .error-mgs {
+        margin-left: 0;
+    }
+}

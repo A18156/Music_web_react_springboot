@@ -31,7 +31,6 @@
 .brand-img {
     display: flex;
     align-items: center;
-    text-decoration: none;
 }
 
 .brand-img img {
@@ -62,7 +61,6 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    text-decoration: none;
 }
 
 .menu-links li .icon {
