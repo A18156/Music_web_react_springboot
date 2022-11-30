@@ -32,7 +32,7 @@ const AddAlbumType = () => {
                         <div className="container">
                             <div className="row justify-content-around">
                                 <form action="" className="col-md-6 bg-light p-3 my-3">
-                                    <h1 className="text-center text-uppercase h3 py-3">Add Album's Type</h1>
+                                    <h1 className="text-center text-uppercase h3 py-3">Add Album&quot;s Type</h1>
                                     <div className="form-group">
                                         <label htmlFor="Albumtype">Album Type</label>
                                         <input type="text" name="Albumtype" id="Albumtype" className="form-control" />

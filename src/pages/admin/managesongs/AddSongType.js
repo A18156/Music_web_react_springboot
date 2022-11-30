@@ -33,7 +33,7 @@ const AddSongType = () => {
                         <div className="container">
                             <div className="row justify-content-around">
                                 <form action="" className="col-md-6 bg-light p-3 my-3">
-                                    <h1 className="text-center text-uppercase h3 py-3">Add Song's Type</h1>
+                                    <h1 className="text-center text-uppercase h3 py-3">Add Song&quot;s Type</h1>
                                     <div className="form-group">
                                         <label htmlFor="songtype">Song Type</label>
                                         <input type="text" name="songtype" id="songtype" className="form-control" />
