@@ -14,7 +14,7 @@
 
 .f_login_content {
     max-width: 350px;
-    min-height: 550px;
+    /*min-height: 550px;*/
     margin: auto;
     padding: 20px;
     background: var(--primary-color);
@@ -38,28 +38,24 @@
 }
 
 .f_login_row input {
-    height: 32px;
     padding: 2px 4px;
-    border-radius: 10px;
-    margin-top: 1rem;
-    outline: none;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    background: var(--primary-color);
+    border-radius: 4px;
     font-size: 1.6rem;
+    /*border: none ;*/
+    width: 100%;
+    border:1px solid transparent;
+}
+.f_login_row input::placeholder {
+    text-transform: capitalize;
 }
 
-.f_login_row input:placeholder,
-.f_login_row input:-moz-placeholder,
-.f_login_row input:-webkit-input-placeholder,
-.f_login_row input:-ms-input-placeholder {
-    color: var(--text-color) !important;
-    font-size: .6rem;
-}
-.f_bottom_login input{
-    cursor: pointer;
-}
+/*.f_login_row input::placeholder,*/
+/*.f_login_row input::-moz-placeholder,*/
+/*.f_login_row input::-webkit-input-placeholder,*/
+/*.f_login_row input::-ms-input-placeholder {*/
+/*    color: var(--text-color) !important;*/
+/*    font-size: .6rem;*/
+/*}*/
 
 .f_bottom_login input:focus {
     border: 2px solid blue;
@@ -72,12 +68,13 @@
 }
 
 .f_bottom_login {
-    margin-top: 4rem;
+    margin-top: 1.5rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-transform: capitalize;
 }
 
 .f_bottom_login input {
@@ -87,6 +84,7 @@
     font-size: 1.4rem;
     border-radius: 20px;
     border: none;
+    cursor: pointer;
 }
 .sign_up_link{
     margin-top: 1.5rem;
@@ -94,13 +92,16 @@
     text-decoration: underline;
     padding: 5px;
     border-radius: 10px;
+    cursor: pointer;
 }
 .sign_up_link:hover{
     background-color: rgba(230, 61, 31, 1);
+    color: var(--toggle-color);
 }
 
 .f_bottom_login input:hover {
     background: rgba(230, 61, 31, .5);
+    color: var(--toggle-color);
 }
 
 @media (max-width:1024px) {
